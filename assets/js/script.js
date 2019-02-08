@@ -74,7 +74,7 @@ $(function(){//Declar function
                     }
                 }
                 $nbRatio = (100*$nbWin)/$nbPlay;    //calcul ratio victoires
-                $resultRatio.text('Ratio : ' + $nbRatio.toFixed(2) + '%') // Montre le ratio de victoires arrondi au diwièmes
+                $resultRatio.text('Ratio : ' + $nbRatio.toFixed(2) + '%') // Montre le ratio de victoires arrondi au dixième
             }else{                                                                              // Si le joueur n'a pas fait de choix
                 alert('Faites un choix!');
             }
