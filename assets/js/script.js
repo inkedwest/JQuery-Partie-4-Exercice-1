@@ -11,23 +11,23 @@ $(function(){//Declar function
             var $playerpaper = document.getElementById("paper");   //  input radio in var
             var $playerchisel = document.getElementById("chisel");
             var $resultNotif = $('#result');    //Pour avoir le résultat
-            var $resultWin = $('#resultWin');
-            var $resultLose = $('#resultLose')
-            var $resultRatio = $('#resultRatio');
+            var $resultWin = $('#resultWin'); // Résultat de victoires
+            var $resultLose = $('#resultLose') // Résultat de défaites
+            var $resultRatio = $('#resultRatio'); // Résultat du Ratio
 
             if($playerstone.checked || $playerpaper.checked || $playerchisel.checked){       // Si le joueur a fait un choix
                 if($computerChoice == 0){                                      //Si l'ordi choisit pierre
-                    if($playerstone.checked){                        //Si le joueur choisit pierre
-                        $resultNotif.text('Égalité.\'');
+                    if($playerstone.checked){                        //et que le joueur choisit pierre
+                        $resultNotif.text('Égalité !');
                         $resultNotif.css('color', 'blue');
                         $nbPlay++;
-                    }else if($playerpaper.checked){                  //Si le joueur choisit papier
+                    }else if($playerpaper.checked){                  //et que le joueur choisit papier
                         $resultNotif.text('Gagné !')
                         $resultNotif.css('color', 'green');
                         $nbPlay++;
                         $nbWin++;
                         $resultWin.text('Nombre de partie gagner : ' + $nbWin);
-                    }else if($playerchisel.checked){                 //Si le joueur chosii ciseaux
+                    }else if($playerchisel.checked){                 //et que le joueur chosii ciseaux
                         $resultNotif.text('Perdu !')
                         $resultNotif.css('color', 'red');
                         $nbPlay++;
@@ -36,17 +36,17 @@ $(function(){//Declar function
                     }
                 }
                 if($computerChoice == 1){                                      //Si l'ordi choisit papier
-                    if($playerstone.checked){                        //si le joueur choisit pierre
-                        $resultNotif.text('Perdu ! :c')
+                    if($playerstone.checked){                        // et que le joueur choisit pierre
+                        $resultNotif.text('Perdu !')
                         $resultNotif.css('color', 'red');
                         $nbPlay++;
                         $nbLose++;
                         $resultLose.text('Nombre de partie perdue : ' + $nbLose);
-                    }else if($playerpaper.checked){                  //si le joueur choisit papier
+                    }else if($playerpaper.checked){                  //et que le joueur choisit papier
                         $resultNotif.text('Égalité.\'');
                         $resultNotif.css('color', 'blue');
                         $nbPlay++;
-                    }else if($playerchisel.checked){                 //si le joueur choisit ciseaux
+                    }else if($playerchisel.checked){                 //et que le joueur choisit ciseaux
                         $resultNotif.text('Gagné !')
                         $resultNotif.css('color', 'green');
                         $nbPlay++;
@@ -54,20 +54,20 @@ $(function(){//Declar function
                         $resultWin.text('Nombre de partie gagner : ' + $nbWin);
                     }
                 }
-                if($computerChoice == 2){                                      //si ordi choisit ciseaux
-                    if($playerstone.checked){                        //si joueur choisit pierre
+                if($computerChoice == 2){                                      //si l'ordi choisit ciseaux
+                    if($playerstone.checked){                        //et que le joueur choisit pierre
                         $resultNotif.text('Gagné !')
                         $resultNotif.css('color', 'green');
                         $nbPlay++;
                         $nbWin++;
                         $resultWin.text('Nombre de parties gagnées : ' + $nbWin);
-                    }else if($playerpaper.checked){                  //si joueur choisit papier
+                    }else if($playerpaper.checked){                  //et que le joueur choisit papier
                         $resultNotif.text('Perdu ! :c')
                         $resultNotif.css('color', 'red');
                         $nbPlay++;
                         $nbLose++;
                         $resultLose.text('Nombre de parties perdues : ' + $nbLose);
-                    }else if($playerchisel.checked){                 //si joueur choisit ciseaux
+                    }else if($playerchisel.checked){                 //et que le joueur choisit ciseaux
                         $resultNotif.text('Égalité !\'');
                         $resultNotif.css('color', 'blue');
                         $nbPlay++;
